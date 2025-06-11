@@ -7,12 +7,11 @@ import { images } from "@/content/images";
 import { texts } from "@/content/texts";
 
 const Gallery = () => {
-  const [selectedYear, setSelectedYear] = useState("2024");
+  const [selectedYear, setSelectedYear] = useState("2025");
 
   const galleries = {
+    "2025": images.gallery2025,
     "2024": images.gallery2024,
-    "2023": images.gallery2023,
-    "2022": images.gallery2022
   };
 
   const years = Object.keys(galleries).sort().reverse();
