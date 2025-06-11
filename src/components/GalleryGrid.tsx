@@ -5,6 +5,7 @@ import ImageLightbox from "./ImageLightbox";
 interface Image {
   src: string;
   alt: string;
+  description?: string;
 }
 
 interface GalleryGridProps {
@@ -32,16 +33,25 @@ const GalleryGrid = ({ images, title, className = "" }: GalleryGridProps) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className="aspect-square overflow-hidden rounded-lg bg-muted photo-hover fade-in"
+            className="fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
-            onClick={() => openLightbox(index)}
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <div
+              className="aspect-square overflow-hidden rounded-lg bg-muted photo-hover"
+              onClick={() => openLightbox(index)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            {image.description && (
+              <p className="text-sm text-muted-foreground mt-2 text-center">
+                {image.description}
+              </p>
+            )}
           </div>
         ))}
       </div>

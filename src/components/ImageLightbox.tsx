@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 interface Image {
   src: string;
   alt: string;
+  description?: string;
 }
 
 interface ImageLightboxProps {
@@ -79,12 +80,20 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose }: ImageLightboxP
           </>
         )}
 
-        <img
-          src={images[current]?.src}
-          alt={images[current]?.alt}
-          className="max-w-full max-h-full object-contain"
-          onClick={(e) => e.stopPropagation()}
-        />
+        <div className="flex flex-col items-center justify-center max-w-full max-h-full">
+          <img
+            src={images[current]?.src}
+            alt={images[current]?.alt}
+            className="max-w-full max-h-[80vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+          
+          {images[current]?.description && (
+            <p className="text-center text-muted-foreground mt-4 max-w-2xl px-4">
+              {images[current].description}
+            </p>
+          )}
+        </div>
 
         {images.length > 1 && (
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-muted-foreground">
