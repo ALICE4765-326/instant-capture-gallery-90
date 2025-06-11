@@ -24,31 +24,25 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section avec toute la présentation */}
       <section className="pt-24 pb-16 px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="slide-up">
             <Camera className="h-16 w-16 mx-auto mb-8 text-primary" />
-            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-light mb-8 tracking-tight">
               Portfolio
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-              Photographe passionnée, je capture l'instant avec l'envie de transmettre une émotion, 
-              une ambiance ou simplement la beauté d'un moment.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Bio Section */}
-      <section className="py-16 px-6 bg-accent/30">
-        <div className="container mx-auto max-w-3xl">
-          <div className="fade-in">
-            <p className="text-lg leading-relaxed text-center">
-              Peu importe le sujet – concert, voyage, événement sportif ou paysage – tout devient 
-              plus vivant quand j'ai un projet photo en tête. Ce portfolio est à la fois mon terrain 
-              d'exploration et mon carnet de route. Bienvenue dans mon univers.
-            </p>
+            <div className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed space-y-4">
+              <p>
+                Photographe passionnée, je capture l'instant avec l'envie de transmettre une émotion, 
+                une ambiance ou simplement la beauté d'un moment.
+              </p>
+              <p>
+                Peu importe le sujet – concert, voyage, événement sportif ou paysage – tout devient 
+                plus vivant quand j'ai un projet photo en tête. Ce portfolio est à la fois mon terrain 
+                d'exploration et mon carnet de route. Bienvenue dans mon univers.
+              </p>
+            </div>
           </div>
         </div>
       </section>
