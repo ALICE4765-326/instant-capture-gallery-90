@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Camera } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -25,7 +24,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section avec toute la présentation */}
-      <section className="pt-24 pb-16 px-6">
+      <section className="pt-24 pb-12 px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="slide-up">
             <Camera className="h-16 w-16 mx-auto mb-8 text-primary" />
@@ -48,7 +47,7 @@ const Index = () => {
       </section>
 
       {/* Recent Work Preview */}
-      <section className="py-20 px-6">
+      <section className="py-12 px-6">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-light text-center mb-16 slide-up">Travaux récents</h2>
           
