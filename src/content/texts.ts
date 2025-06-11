@@ -3,76 +3,52 @@
 export const texts = {
   // Page d'accueil
   home: {
-    title: "Portfolio",
+    title: "Portefólio",
     subtitle: {
-      intro: "Photographe passionnée, je capture l'instant avec l'envie de transmettre une émotion, une ambiance ou simplement la beauté d'un moment.",
-      description: "Peu importe le sujet – concert, voyage, événement sportif ou paysage – tout devient plus vivant quand j'ai un projet photo en tête. Ce portfolio est à la fois mon terrain d'exploration et mon carnet de route. Bienvenue dans mon univers."
+      intro: "Fotógrafa apaixonada, procuro capturar o instante com a intenção de transmitir uma emoção, uma atmosfera ou simplesmente a beleza de um momento vivido.",
+      description: "Seja num concerto vibrante, numa viagem, num evento desportivo ou perante um horizonte tranquilo — tudo ganha mais significado quando visto através da minha lente. Este portefólio é ao mesmo tempo o meu campo de exploração e o meu diário de bordo. Bem-vindo ao meu universo."
     },
     recentWork: {
-      title: "Travaux récents",
-      buttonText: "Voir toutes les galeries"
+      title: "Fotografias recentes",
+      buttonText: "Ver todas as galerias"
     },
     callToAction: {
       title: "Travaillons ensemble",
-      subtitle: "Vous avez un projet ? Une idée ? N'hésitez pas à me contacter.",
-      buttonText: "Me contacter"
+      subtitle: "Procuro expandir o meu portefólio fotográfico. Se tiver um projeto ou oportunidade onde possa contribuir sem custos para si, estou disponível para colaborar e partilhar o meu olhar.",
+      buttonText: "Contacte-me"
     }
   },
 
   // Page galerie
   gallery: {
-    title: "Galeries",
-    subtitle: "Une sélection de mes travaux organisés par année",
-    collectionPrefix: "Collection"
+    title: "Galerias",
+    subtitle: "Uma coleção das minhas fotografias, organizada por ano",
+    collectionPrefix: "Coleção"
   },
 
   // Page contact
   contact: {
-    title: "Contact",
-    subtitle: "Discutons de votre projet ensemble",
+    title: "Contacto",
+    subtitle: "",
     intro: {
-      title: "Restons en contact",
-      description: "Vous avez un projet photo en tête ? Que ce soit pour un événement, un portrait, ou simplement pour discuter d'une collaboration, n'hésitez pas à me contacter."
+      title: "Fale comigo",
+      description: "Procuro desenvolver o meu portefólio fotográfico. Se tiver uma oportunidade ou um projeto em que eu possa participar sem qualquer encargo financeiro da sua parte, não hesite em contactar-me. Terei todo o gosto em colaborar e contribuir com o meu olhar para a sua iniciativa.",
+      buttonText: "Contacte-me""
     },
     info: {
       email: {
         label: "Email",
-        value: "contact@photographe.fr"
+        value: "aliceleacosta@gmail.com"
       },
       phone: {
-        label: "Téléphone",
-        value: "+33 6 12 34 56 78"
+        label: "Telemóvel",
+        value: "+351 923 319 672"
       },
       location: {
-        label: "Localisation",
-        value: "France"
+        label: "Localização",
+        value: "Vila Nova de Famalicão"
       }
-    },
-    form: {
-      title: "Envoyez-moi un message",
-      fields: {
-        name: {
-          label: "Nom",
-          placeholder: "Votre nom"
-        },
-        email: {
-          label: "Email",
-          placeholder: "votre@email.com"
-        },
-        subject: {
-          label: "Sujet",
-          placeholder: "Sujet de votre message"
-        },
-        message: {
-          label: "Message",
-          placeholder: "Décrivez votre projet..."
-        }
       },
-      submitButton: "Envoyer le message",
-      successMessage: {
-        title: "Message envoyé !",
-        description: "Je vous répondrai dans les plus brefs délais."
-      }
     }
   }
 };
