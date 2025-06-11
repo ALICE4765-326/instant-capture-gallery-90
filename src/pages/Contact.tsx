@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
+import { texts } from "@/content/texts";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,8 +22,8 @@ const Contact = () => {
     
     // Simulation de l'envoi du formulaire
     toast({
-      title: "Message envoyé !",
-      description: "Je vous répondrai dans les plus brefs délais.",
+      title: texts.contact.form.successMessage.title,
+      description: texts.contact.form.successMessage.description,
     });
 
     // Reset du formulaire
@@ -48,21 +49,19 @@ const Contact = () => {
       <div className="pt-24 pb-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-light text-center mb-4 slide-up">
-            Contact
+            {texts.contact.title}
           </h1>
           <p className="text-center text-muted-foreground mb-16 slide-up">
-            Discutons de votre projet ensemble
+            {texts.contact.subtitle}
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Informations de contact */}
             <div className="space-y-8">
               <div className="fade-in">
-                <h2 className="text-2xl font-medium mb-6">Restons en contact</h2>
+                <h2 className="text-2xl font-medium mb-6">{texts.contact.intro.title}</h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Vous avez un projet photo en tête ? Que ce soit pour un événement, 
-                  un portrait, ou simplement pour discuter d'une collaboration, 
-                  n'hésitez pas à me contacter.
+                  {texts.contact.intro.description}
                 </p>
               </div>
 
@@ -72,8 +71,8 @@ const Contact = () => {
                     <div className="flex items-center space-x-4">
                       <Mail className="h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium">Email</p>
-                        <p className="text-muted-foreground">contact@photographe.fr</p>
+                        <p className="font-medium">{texts.contact.info.email.label}</p>
+                        <p className="text-muted-foreground">{texts.contact.info.email.value}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -84,8 +83,8 @@ const Contact = () => {
                     <div className="flex items-center space-x-4">
                       <Phone className="h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium">Téléphone</p>
-                        <p className="text-muted-foreground">+33 6 12 34 56 78</p>
+                        <p className="font-medium">{texts.contact.info.phone.label}</p>
+                        <p className="text-muted-foreground">{texts.contact.info.phone.value}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -96,8 +95,8 @@ const Contact = () => {
                     <div className="flex items-center space-x-4">
                       <MapPin className="h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium">Localisation</p>
-                        <p className="text-muted-foreground">France</p>
+                        <p className="font-medium">{texts.contact.info.location.label}</p>
+                        <p className="text-muted-foreground">{texts.contact.info.location.value}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -108,14 +107,14 @@ const Contact = () => {
             {/* Formulaire de contact */}
             <Card className="fade-in" style={{ animationDelay: "0.4s" }}>
               <CardHeader>
-                <CardTitle>Envoyez-moi un message</CardTitle>
+                <CardTitle>{texts.contact.form.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Nom
+                        {texts.contact.form.fields.name.label}
                       </label>
                       <Input
                         id="name"
@@ -124,12 +123,12 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        placeholder="Votre nom"
+                        placeholder={texts.contact.form.fields.name.placeholder}
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email
+                        {texts.contact.form.fields.email.label}
                       </label>
                       <Input
                         id="email"
@@ -138,14 +137,14 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="votre@email.com"
+                        placeholder={texts.contact.form.fields.email.placeholder}
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                      Sujet
+                      {texts.contact.form.fields.subject.label}
                     </label>
                     <Input
                       id="subject"
@@ -154,13 +153,13 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      placeholder="Sujet de votre message"
+                      placeholder={texts.contact.form.fields.subject.placeholder}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message
+                      {texts.contact.form.fields.message.label}
                     </label>
                     <Textarea
                       id="message"
@@ -168,13 +167,13 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="Décrivez votre projet..."
+                      placeholder={texts.contact.form.fields.message.placeholder}
                       rows={6}
                     />
                   </div>
 
                   <Button type="submit" className="w-full group">
-                    Envoyer le message
+                    {texts.contact.form.submitButton}
                     <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </form>
